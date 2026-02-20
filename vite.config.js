@@ -2,7 +2,7 @@ import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 
 export default defineConfig({
-  base: '/lumid_ai/',        // ✅ REQUIRED for GitHub Pages
+  base: '/lumid_ai/',
   plugins: [react()],
-  publicDir: 'resources',   // ✅ for images/static files
+  publicDir: 'resources',
 })
