@@ -1,0 +1,10 @@
+node_modules
+dist
+.DS_Store
+.env
+.idea
+.vscode
+resources/**.psd # Example: Exclude specific files if needed, but not the whole folder.
+resources/Screenshot* # Maybe exclude screenshots if they are large and temporary.
+*.log
+coverage
