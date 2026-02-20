@@ -40,14 +40,14 @@ const ChatInput = ({ value, onChange }) => {
         <div className="flex items-center gap-3">
           {/* Voice Button - using actual SVG from design */}
           <img 
-            src="/Frame 1618871919.svg" 
+            src="Frame 1618871919.svg" 
             alt="Voice"
             className="w-[44px] h-[44px] cursor-pointer hover:opacity-80 transition-opacity"
           />
           
           {/* Send Button - using actual SVG from design */}
           <img 
-            src="/Frame 1618871925.svg" 
+            src="Frame 1618871925.svg"  
             alt="Send"
             className="w-[44px] h-[44px] cursor-pointer hover:scale-105 transition-transform"
             style={{

@@ -16,7 +16,7 @@ const CatMascot = () => {
         }}
       >
         <img 
-          src="/message.png" 
+          src="message.png" 
           alt="Speech bubble"
           className="w-full h-full object-contain"
         />
@@ -32,7 +32,7 @@ const CatMascot = () => {
         }}
       >
         <img 
-          src="/cat.png" 
+          src="cat.png" 
           alt="Lumid AI Cat Mascot"
           className="w-full h-full object-contain drop-shadow-md"
         />

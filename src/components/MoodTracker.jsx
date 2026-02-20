@@ -46,7 +46,7 @@ const MoodTracker = ({
     >
       {/* Love Icon - positioned at top right, rotated */}
       <img 
-        src="/love_icone.png" 
+        src="love_icone.png" 
         alt="Love" 
         className="absolute object-contain"
         style={{ 
@@ -168,7 +168,7 @@ const MoodTracker = ({
         />
         {/* Send Button */}
         <img 
-          src="/Frame 1618871925.svg" 
+          src="Frame 1618871925.svg" 
           alt="Send"
           className="cursor-pointer hover:scale-105 transition-transform"
           style={{ width: '32px', height: '32px' }}

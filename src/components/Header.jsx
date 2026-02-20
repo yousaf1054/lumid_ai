@@ -35,7 +35,7 @@ const Header = () => {
         }}
       >
         <img 
-          src="/Frame 1618872018.svg" 
+          src="Frame 1618872018.svg" 
           alt="Comfort Toolkit"
           className="h-10 sm:h-12 md:h-14 lg:h-16 w-auto transition-all duration-200"
         />
