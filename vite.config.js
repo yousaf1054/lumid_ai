@@ -5,4 +5,5 @@ export default defineConfig({
   base: '/lumid_ai/',
   plugins: [react()],
   publicDir: 'resources',
+  base: '/lumid_ai/',
 })

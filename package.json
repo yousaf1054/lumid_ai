@@ -4,12 +4,14 @@
   "type": "module",
   "description": "Lumid AI - Mental Wellness Companion",
   "private": true,
- "scripts": {
-  "dev": "vite",
-  "build": "vite build",
-  "preview": "vite preview",
-  "deploy": "gh-pages -d dist"
-},
+  "homepage": "https://yousaf1054.github.io/lumid_ai",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist"
+  },
   "dependencies": {
     "lucide-react": "^0.263.1",
     "react": "^18.2.0",
