@@ -1,0 +1,316 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body, #root {
+  height: 100%;
+  min-height: 100vh;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom gradient background using actual bg.svg */
+.bg-lumid-gradient {
+  background: linear-gradient(180deg, #EFFFF7 0%, #CFF5E7 100%);
+  background-image: url('/bg.svg');
+  background-size: cover;
+  background-position: center bottom;
+  background-repeat: no-repeat;
+}
+
+/* Mood slider custom styles */
+.mood-slider {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  border-radius: 4px;
+  outline: none;
+  background: linear-gradient(90deg, #ffd54f 0%, #aed581 50%, #81c784 100%);
+}
+
+.mood-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #ffd54f;
+  cursor: pointer;
+  border: 3px solid white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.mood-slider::-moz-range-thumb {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #ffd54f;
+  cursor: pointer;
+  border: 3px solid white;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Custom mood slider with pastel gradient */
+.mood-slider-custom {
+  -webkit-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
+.mood-slider-custom::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #FFD966;
+  cursor: pointer;
+  border: 3px solid #FFFFFF;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease;
+}
+
+.mood-slider-custom::-webkit-slider-thumb:hover {
+  transform: scale(1.1);
+}
+
+.mood-slider-custom::-moz-range-thumb {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: #FFD966;
+  cursor: pointer;
+  border: 3px solid #FFFFFF;
+  box-shadow: 0px 2px 6px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease;
+}
+
+.mood-slider-custom::-moz-range-thumb:hover {
+  transform: scale(1.1);
+}
+
+/* Mood dots */
+.mood-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: transparent;
+  border: 1.5px solid #d4d4d8;
+  transition: all 0.2s ease;
+}
+
+.mood-dot.active {
+  background-color: #4ade80;
+  border-color: #22c55e;
+}
+
+/* Chat input styles */
+.chat-input {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+}
+
+/* Speech bubble */
+.speech-bubble {
+  position: relative;
+  background: white;
+  border-radius: 16px;
+  padding: 10px 16px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+}
+
+.speech-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 8px solid white;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #c8e6c9;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #a5d6a7;
+}
+
+/* Animation for cat */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.cat-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* Send button with gradient - matching design */
+.btn-send {
+  background: linear-gradient(180deg, #00E58D 0%, #00C77D 100%);
+  border-radius: 50%;
+  width: 37px;
+  height: 37px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1.5px solid white;
+  box-shadow: 0 0 0 1.5px white, 0 2px 8px rgba(0, 229, 141, 0.3);
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.btn-send:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 0 1.5px white, 0 4px 16px rgba(0, 229, 141, 0.4);
+}
+
+.btn-send:active {
+  transform: scale(0.95);
+}
+
+/* Comfort toolkit button */
+.comfort-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 20px;
+  background: white;
+  border-radius: 9999px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1), 0 3px 8px rgba(0, 0, 0, 0.05);
+  border: 1px solid #8DDBBD;
+  color: #737373;
+  font-weight: 500;
+  font-size: 14px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.comfort-btn:hover {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Menu button */
+.menu-btn {
+  width: 48px;
+  height: 48px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.08);
+  border: 1px solid #f3f3f3;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.menu-btn:hover {
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.menu-btn .line {
+  width: 18px;
+  height: 2px;
+  background: #474747;
+  border-radius: 2px;
+}
+
+/* Voice button */
+.voice-btn {
+  width: 34px;
+  height: 34px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid #f3f3f3;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.voice-btn:hover {
+  background: #f9fafb;
+}
+
+/* Understand emotion button */
+.emotion-btn {
+  padding: 10px 20px;
+  border-radius: 9999px;
+  font-size: 14px;
+  font-weight: 500;
+  border: 1px solid #e5e5e5;
+  color: #525252;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.emotion-btn:hover {
+  border-color: #86efac;
+  color: #22c55e;
+}
+
+/* Mood card */
+.mood-card {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(20px);
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+}
+
+/* Tag pill styles */
+.tag-pill {
+  padding: 8px 16px;
+  border-radius: 9999px;
+  font-size: 14px;
+  font-weight: 400;
+  transition: all 0.2s ease;
+  cursor: pointer;
+  border: 1px solid #e5e5e5;
+  color: #737373;
+  background: white;
+}
+
+.tag-pill:hover {
+  border-color: #86efac;
+  color: #22c55e;
+}
+
+.tag-pill.selected {
+  border-color: #22c55e;
+  background-color: #f0fdf4;
+  color: #16a34a;
+}
